@@ -1,4 +1,5 @@
 var Model = (function(){
+
 	var model = function(){
 		var _model = {
 			'firstname': "dzdzdd",
@@ -27,5 +28,6 @@ var Model = (function(){
 			this.notify(attribute_name, value);
 		};
 	};
+
 	return new model();
 })();
