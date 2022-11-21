@@ -2,8 +2,8 @@ var Model = (function(){
 
 	var model = function(){
 		var _model = {
-			'firstname': "dzdzdd",
-			'lastname': "Doe"
+			firstname: "John",
+			lastname: "Doe"
 		};
 
 		var listeners = [];
@@ -13,13 +13,12 @@ var Model = (function(){
 		};
 
 		this.notify = function(attribute_name, newValue){
-			for(var i = 0; i < listeners.length; i++){
-				listeners[i](attribute_name, newValue);
+			for(var listener of listeners){
+				listener(attribute_name, newValue);
 			}
 		};
 
 		this.getCurrentValue = function(attribute_name){
-			console.log(_model[attribute_name]);
 			return _model[attribute_name];
 		};
 
